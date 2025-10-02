@@ -251,19 +251,19 @@ export function VideosPage() {
             </p>
             <div className="flex justify-center gap-4">
               <Button 
-                onClick={() => window.open('https://youtube.com/@agrowise', '_blank')}
+                onClick={() => window.open('https://www.youtube.com/@arjunvlogger3344', '_blank')}
                 className="bg-red-600 hover:bg-red-700"
               >
                 📺 YouTube
               </Button>
               <Button 
-                onClick={() => window.open('https://facebook.com/agrowise', '_blank')}
+                onClick={() => window.open('https://www.facebook.com/profile.php?id=61574903970172', '_blank')}
                 className="bg-blue-600 hover:bg-blue-700"
               >
                 📘 Facebook
               </Button>
               <Button 
-                onClick={() => window.open('https://instagram.com/agrowise', '_blank')}
+                onClick={() => window.open('https://www.instagram.com/arjun_ashok__student_farmer', '_blank')}
                 className="bg-pink-600 hover:bg-pink-700"
               >
                 📸 Instagram
