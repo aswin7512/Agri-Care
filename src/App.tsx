@@ -68,25 +68,25 @@ export default function App() {
                   onClick={() => window.open('https://youtube.com/@arjunvlogger3344?si=JLf_x70Fffo11G-8', '_blank')}
                   className="text-2xl hover:text-green-300"
                 >
-                  📺
+                  <img src='youtube.png' width='50%' height='50%'></img>
                 </button>
                 <button 
                   onClick={() => window.open('https://www.facebook.com/share/17Z4VzEDKT/', '_blank')}
                   className="text-2xl hover:text-green-300"
                 >
-                  📘
+                  <img src='facebook.png' width='50%' height='50%'></img>
                 </button>
                 <button 
                   onClick={() => window.open('https://www.instagram.com/arjun_ashok__student_farmer?utm_source=qr&igsh=MXM0YzNuaXpob2t4MQ==', '_blank')}
                   className="text-2xl hover:text-green-300"
                 >
-                  📸
+                  <img src='instagram.png' width='50%' height='50%'></img>
                 </button>
                 <button 
                   onClick={() => window.open('https://whatsapp.com/channel/0029Va6drC69Bb61MGuVP33P', '_blank')}
                   className="text-2xl hover:text-green-300"
                 >
-                  📱
+                  <img src='whatsapp.png' width='50%' height='50%'></img>
                 </button>
               </div>
             </div>
