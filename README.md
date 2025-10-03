@@ -63,6 +63,9 @@ You need to have Node.js and npm (or yarn/pnpm) installed on your machine.
     ```
     Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) (or a similar port) with your browser to see the result.
 
+## Find the Hosted website here
+  Open [https://arjunsagri-care.netlify.app/](https://arjunsagri-care.netlify.app/)
+
 ## Project Structure
 
 The project follows a standard React application structure:
@@ -70,15 +73,15 @@ The project follows a standard React application structure:
 ```
 /
 ├── public/              # Static assets (images, fonts)
-│   ├── arjun.jpeg
-│   └── cover.jpeg
+│   └── ...
 ├── src/                 # Main source code
 │   ├── components/      # Reusable UI components
 │   │   ├── ui/          # Shadcn UI components
 │   │   └── ...
 │   ├── pages/           # Page components (if using Next.js)
 │   ├── App.jsx          # Main App component
-│   └── main.jsx         # Application entry point
+|   ├── main.jsx         # Application entry point
+│   └── ...
 ├── .gitignore
 ├── package.json
 └── README.md
