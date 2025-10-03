@@ -9,9 +9,6 @@ interface Video {
   title: string;
   description: string;
   duration: string;
-  category: string;
-  views: string;
-  uploadDate: string;
   thumbnailUrl: string;
   videoUrl: string;
   platform: 'YouTube' | 'Facebook' | 'Instagram';
@@ -26,80 +23,35 @@ export function VideosPage() {
   const videos: Video[] = [
     {
       id: 1,
-      title: "Complete Guide to Tomato Farming",
-      description: "Learn everything about tomato cultivation from seed to harvest",
-      duration: "15:30",
-      category: "Crop Management",
-      views: "25.3K",
-      uploadDate: "2 days ago",
-      thumbnailUrl: "https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=400",
-      videoUrl: "https://youtube.com/watch?v=example1",
+      title: "കലാലയത്തിലെ കാർഷികാർജ്ജുനീയം",
+      description: "കുട്ടനാടൻ ഗ്രാമമായ മുട്ടാറിലെ ഒരു കൊച്ചു കാർഷിക പ്രതിഭ ശ്രെദ്ധേയനാകുന്നു.തൈപറമ്പിൽ വീട്ടിലെ അർജുൻ അശോക് എന്ന പ്ലസ് ഒൺ വിദ്യാർത്ഥി പച്ചക്കറി കൃഷിയിലൂടെ മികച്ച നേട്ടം കൈവരിക്കുക വഴി നേടിയത് വിദ്യാർത്ഥി കർഷക പ്രതിഭ, ഉജ്ജ്വല ബാല്യം എന്നീ സർക്കാർ ബഹുമതികളാണ് . കൂടാതെ ഏഴാം തരത്തിലെ മലയാളം പാഠാവലിയിലും അർജുന്റെ കൃഷിമുറകൾ പ്രതിപാദിക്കുന്നു.",
+      duration: "19:49",
+      thumbnailUrl: "video1.jpg",
+      videoUrl: "https://youtu.be/-IYpZNopsGw",
       platform: "YouTube"
     },
     {
       id: 2,
-      title: "Soil Testing and pH Management",
-      description: "Understanding soil health and how to test and manage pH levels",
-      duration: "12:45",
-      category: "Soil Health",
-      views: "18.7K",
-      uploadDate: "5 days ago",
-      thumbnailUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
-      videoUrl: "https://youtube.com/watch?v=example2",
+      title: "കുറച്ച് കൃഷി വിശേഷങ്ങളും വിളവെടുപ്പും 🥰🥰",
+      description: "എന്റെ വീട്ടിലെ കുറച്ച കൃഷി കണ്ടാലോ ",
+      duration: "09:13",
+      thumbnailUrl: "video2.jpg",
+      videoUrl: "https://youtu.be/3c3Ghc0tTbs",
       platform: "YouTube"
     },
     {
       id: 3,
-      title: "Organic Pest Control Methods",
-      description: "Natural ways to control pests without harmful chemicals",
-      duration: "18:20",
-      category: "Pest Control",
-      views: "32.1K",
-      uploadDate: "1 week ago",
-      thumbnailUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
-      videoUrl: "https://facebook.com/watch?v=example3",
+      title: "ശീതകാല പച്ചക്കറികളുടെ സമയമായി🌱🌱",
+      description: "..",
+      duration: "00:46",
+      thumbnailUrl: "products.png",
+      videoUrl: "https://www.facebook.com/share/v/1GmGW3UUHi/",
       platform: "Facebook"
-    },
-    {
-      id: 4,
-      title: "Drip Irrigation Setup Guide",
-      description: "Step-by-step guide to install and maintain drip irrigation",
-      duration: "22:10",
-      category: "Irrigation",
-      views: "41.5K",
-      uploadDate: "2 weeks ago",
-      thumbnailUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
-      videoUrl: "https://youtube.com/watch?v=example4",
-      platform: "YouTube"
-    },
-    {
-      id: 5,
-      title: "Composting for Beginners",
-      description: "How to make nutrient-rich compost at home",
-      duration: "10:35",
-      category: "Organic Farming",
-      views: "15.8K",
-      uploadDate: "3 weeks ago",
-      thumbnailUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=400",
-      videoUrl: "https://instagram.com/reel/example5",
-      platform: "Instagram"
-    },
-    {
-      id: 6,
-      title: "Modern Farming Equipment Review",
-      description: "Latest tools and equipment for efficient farming",
-      duration: "25:45",
-      category: "Equipment",
-      views: "28.9K",
-      uploadDate: "1 month ago",
-      thumbnailUrl: "https://images.unsplash.com/photo-1690986469727-1ed8bcdf6384?w=400",
-      videoUrl: "https://youtube.com/watch?v=example6",
-      platform: "YouTube"
     }
   ];
 
   const filteredVideos = videos.filter(video => {
-    const matchesCategory = selectedCategory === 'All' || video.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All'
     const matchesSearch = video.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          video.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -138,32 +90,6 @@ export function VideosPage() {
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row gap-4 items-center">
-            <div className="flex-1">
-              <Input
-                placeholder="Search videos..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full"
-              />
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {categories.map((category) => (
-                <Button
-                  key={category}
-                  variant={selectedCategory === category ? "default" : "outline"}
-                  onClick={() => setSelectedCategory(category)}
-                  className={selectedCategory === category ? "bg-green-600" : ""}
-                >
-                  {category}
-                </Button>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Video Stats */}
         <div className="grid md:grid-cols-4 gap-4 mb-8">
           <Card>
@@ -176,22 +102,22 @@ export function VideosPage() {
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl mb-1">👁️</div>
-              <h3>162K+</h3>
-              <p className="text-sm text-gray-600">Total Views</p>
+              <h3>100%</h3>
+              <p className="text-sm text-gray-600">Organic Contents</p>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl mb-1">📺</div>
               <h3>Multi-Platform</h3>
-              <p className="text-sm text-gray-600">YouTube, Facebook, Instagram</p>
+              <p className="text-sm text-gray-600">YouTube, Facebook</p>
             </CardContent>
           </Card>
           <Card>
             <CardContent className="p-4 text-center">
               <div className="text-2xl mb-1">🆕</div>
-              <h3>Weekly</h3>
-              <p className="text-sm text-gray-600">New Content</p>
+              <h3>Frequent</h3>
+              <p className="text-sm text-gray-600">New Contents</p>
             </CardContent>
           </Card>
         </div>
@@ -219,28 +145,15 @@ export function VideosPage() {
                 <CardHeader>
                   <CardTitle className="text-lg line-clamp-2">{video.title}</CardTitle>
                   <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <span>{video.views} views</span>
-                    <span>•</span>
-                    <span>{video.uploadDate}</span>
                   </div>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 line-clamp-2 mb-3">{video.description}</p>
-                  <Badge variant="outline">{video.category}</Badge>
                 </CardContent>
               </div>
             </Card>
           ))}
         </div>
-
-        {/* No Results */}
-        {filteredVideos.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl mb-2">No videos found</h3>
-            <p className="text-gray-600">Try adjusting your search or filter criteria</p>
-          </div>
-        )}
 
         {/* Subscribe Section */}
         <Card className="mt-8 bg-green-100 border-green-300">

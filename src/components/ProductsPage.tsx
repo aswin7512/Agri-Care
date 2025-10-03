@@ -21,7 +21,7 @@ interface Product {
 export function ProductsPage() {
 
   const handleCatalogRequest = () => {
-    const whatsappUrl = `https://wa.me/917012742100`;
+    const whatsappUrl = `https://wa.me/c/917012742100`;
     window.open(whatsappUrl, '_blank');
   };
 

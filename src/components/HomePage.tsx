@@ -66,7 +66,7 @@ export function HomePage() {
               <p className="mb-4">
                 <li>State Best Student Farmer Award Winner 2022-2023 Constrituded by P Prasad, Kerala Agriculture minister</li>
                 <li>District Bala Parliament Minister for Forest, Agriculture, and Environment</li>
-                <li>Ujjwalabalyam Award Recipient 2023 Constrituded by Veena George Agriculture minister</li>
+                <li>Ujjwalabalyam Award Recipient 2023 Constrituded by Veena George Health minister</li>
                 <li>Nava Kerala Sadas Representative</li>
                 <li>Featured in the Class 7 Textbook</li>
                 <li>Participant in the Chief Minister’s Face-to-Face Programme</li>

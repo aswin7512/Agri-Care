@@ -92,6 +92,8 @@ export default function App() {
             </div>
           </div>
           <div className="border-t border-green-700 mt-8 pt-4 text-center text-green-200">
+            <p>Developed By Aswin | Contact for any works... | <a onClick={() => window.open('mailto:aswinnrd09@gmail.com', '_blank')}>aswinnrd09@gmail.com</a></p>
+            <p onClick={() => window.open('https://github.com/aswin7512', '_blank')}>See My Works on 'github.com/aswin7512'</p>
             <p>&copy; 2024 Arjun's Agri Care. All rights reserved. | Empowering Agriculture Through Technology</p>
           </div>
         </div>
